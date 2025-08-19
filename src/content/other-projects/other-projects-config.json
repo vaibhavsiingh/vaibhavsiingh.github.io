@@ -1,0 +1,53 @@
+[
+    {
+        "id": "other-project-2vass",
+        "title": "2-VASS Reachability Algorithm",
+        "year": "Nov 2024 - Dec 2024",
+        "github": "https://github.com/vaibhavsiingh/2-VASS-Reachability",
+        "readMore": "https://arxiv.org/pdf/1412.4259",
+        "tags": ["2D VASS", "Reachability Algorithm", "Linear Path Schema", "PSPACE-complete", "Vector Arithmetic", "Loop Optimization", "Non-Negative Least Squares", "Algorithm Design", "State Space Exploration"],
+        "description": "A self-initiated project implementing a reachability algorithm for 2D Vector Addition Systems with States, a PSPACE-complete problem, using Linear Path Schemas and Non-Negative Least Squares to optimize state exploration and improve efficiency.",
+        "image": "/assets/other-projects/post.webp",
+        "jpg": "/assets/other-projects/post.jpeg"
+
+    },
+    {
+        "id": "other-project-web3",
+        "title": "Decentralized Wikipedia",
+        "year": "Sep 2024 - Oct 2024",
+        "github": "https://github.com/Devanoper/DeWik_V2",
+        "demo": "https://www.loom.com/share/c77a97977dc746a08d1596b8798fc46b?sid=c27e56ba-1e08-4e25-8e6c-373e0a471e1b",
+        "tags": ["Solidity", "Smart Contracts", "IPFS", "Pinata API", "Web3.js", "The Graph", "Subgraph", "Decentralized Applications", "Blockchain", "Hackathon Project"],
+        "description": "A hackathon project developing a decentralized Wikipedia using Solidity smart contracts, IPFS for content storage, Web3.js for blockchain interactions, and The Graph for efficient data indexing and querying.",
+        "readMore": "https://github.com/Devanoper/DeWik_V2/blob/main/README.md",
+        "image": "/assets/other-projects/web3.webp",
+        "jpg": "/assets/other-projects/web3.jpg"
+    },
+    {
+        "id": "other-project-lz78",
+        "title": "Lossless Compression & Context Autocomplete",
+        "year": "Sep 2024 - Oct 2024",
+        "tags": ["LZ77", "Huffman Encoding", "Run-Length Encoding", "Lossless Compression", "KMP Algorithm", "String Matching", "Autocomplete", "Context Tracking", "Data Structures and Algorithms"],
+        "description": "A course project implementing LZ77, Huffman Encoding, and Run-Length Encoding for efficient lossless compression, along with a context-aware autocomplete system using the KMP string matching algorithm and user text history.",
+        "image": "/assets/other-projects/bank.webp",
+        "jpg": "/assets/other-projects/bank.jpeg"
+    },
+    {
+        "id": "other-project-dai",
+        "title": "Forecasting & Decision Analytics",
+        "year": "Aug 2024 - Nov 2024",
+        "tags": ["Stochastic Games", "Probability Theory", "Combinatorics", "ARIMA", "ETS", "Time Series Forecasting", "Predictive Modeling", "Decision Analytics", "Data Analysis", "Interpretable Models"],
+        "description": "A course project applying combinatorics, probability, and stochastic games for decision analytics, combined with ARIMA and ETS models on real-world time series such as parking and taxi data, achieving strong predictive accuracy and interpretable fare modeling.",
+        "github": "https://github.com/awezmehtab/cs215-assignments",
+        "image": "/assets/other-projects/bunder.webp",
+        "jpg": "/assets/other-projects/bunder.jpeg"
+    },
+    {
+        "id": "other-project-quant",
+        "title": "Algorithmic Crypto Trading",
+        "tags": ["Algorithmic Trading", "Crypto", "BTC/ETH", "Volatility Filtering", "Technical Indicators", "Exploratory Data Analysis", "Sharpe Ratio", "Seasonality Analysis", "Risk Management", "Trading Strategies"],
+        "description": "A competition project developing algorithmic trading strategies on BTC/ETH using volatility filtering, technical indicators, and historical anomaly analysis, achieving a 6.55 Sharpe ratio, 51.89% win rate, and controlled drawdowns.",
+        "image": "/assets/other-projects/suicide-analyzer.webp",
+        "jpg": "/assets/other-projects/suicide-analyzer.jpeg"
+    }    
+]

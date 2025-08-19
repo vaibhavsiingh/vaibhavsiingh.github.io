@@ -1,0 +1,30 @@
+{
+    "name": "Vaibhav Singh",
+    "logoType": {
+        "mobile": "VS",
+        "desktop": "Vaibhav Singh"
+    },
+    "mainPicture": "/assets/VS.webp",
+    "mainPictureJPG": "/assets/VS.jpg",
+    "pronunciation": "/vai-bhav/",
+    "audioFile": "/assets/name-pro.mp3",
+    "cssVarPrefix": "vs",
+    "email": "vaibhavsingh84334@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/vaibhav-singh-iitb/",
+    "github": "https://github.com/vaibhavsiingh",
+    "resume": "https://drive.google.com/file/d/150HcEbWZ1f531MdARSw8D0BuQMBUYASK/view?usp=sharing",
+    "socials": [
+        {
+            "type": "linkedin",
+            "link": "https://www.linkedin.com/in/vaibhav-singh-iitb/"
+        },
+        {
+            "type": "github",
+            "link": "https://github.com/vaibhavsiingh"
+        },
+        {
+            "type": "mail",
+            "link": "mailto:vaibhavsingh84334@gmail.com"
+        }
+    ]
+}

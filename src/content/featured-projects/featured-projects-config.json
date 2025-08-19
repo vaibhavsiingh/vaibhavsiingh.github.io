@@ -1,0 +1,109 @@
+[
+    {
+        "id": "featured-project-intern",
+        "location": "University of Warsaw | Prof. Mikolaj Bajoncyuk",
+        "title": "Efficient Execution of Formal Transducers on Compressed Strings",
+        "year": "May 2025 - Jul 2025",
+        "tags": ["Formal Transducers", "DFAs", "SSTs", "Grammar Compression", "Straight-Line Programs", "Lempel-Ziv", "Polyregular Functions", "Algorithm Optimization", "VS Code Extension", "Formal Verification"],
+        "description": "An internship project developing methods to execute DFAs and SSTs directly on grammar-compressed strings, including Lempel-Ziv inputs, improving performance and enabling formal verification via a VS Code extension.",
+        "readMore": "https://drive.google.com/file/d/1QS4BAB1fjbYqtBAO5uXXCe8WzwXTgRac/view?usp=sharing",
+        "github": "https://github.com/AliaumeL/slp-transducer-evaluation",
+        "image": "/assets/featured-projects/intern.webp",
+        "jpg": "/assets/featured-projects/intern.jpg"
+    },
+    {
+        "id": "featured-project-feature-pyramid-network",
+        "title": "Multi-Scale Object Detection using FPN",
+        "year": "Mar 2025 - Apr 2025",
+        "location": "Prof. Pushpak Bhattacharya",
+        "github": "https://github.com/satyam314/Feature-Pyramid-Network-for-Object-Detection",
+        "tags": [
+            "Deep Learning",
+            "Computer Vision",
+            "PyTorch",
+            "Feature Pyramid Networks",
+            "Faster R-CNN",
+            "Object Detection",
+            "CNN",
+            "Image Processing",
+            "AI/ML"
+            ],
+        "readMore": "https://docs.google.com/presentation/d/1WlwHV_Mqlp4hzMDfuxqlwG5r0Qop7qtHYvLippux5Vo/edit?usp=sharing",
+        "description": "Implemented Feature Pyramid Networks (FPN) for multi-scale object detection, enhancing accuracy by combining high-resolution spatial features with semantically rich low-resolution features through top-down and lateral connections. ",
+        "image": "/assets/featured-projects/fpn.webp",
+        "jpg": "/assets/featured-projects/fpn.png"
+    },
+    {
+        "id": "featured-project-xv6-os",
+        "title": "Low-Level OS Development with xv6 and Linux",
+        "year": "Jan 2025 - Apr 2025",
+        "location": "Prof. Mythili Vutukuru",
+        "readMore": "https://www.cse.iitb.ac.in/~mythili/os/",
+        "tags": [
+            "C",
+            "xv6",
+            "Operating Systems",
+            "Virtual Memory",
+            "Copy-on-Write",
+            "Demand Paging",
+            "Concurrency",
+            "Semaphores",
+            "Condition Variables",
+            "Threads",
+            "Parallel Processing",
+            "Systems Programming"
+            ],        
+        "description": "An academic project focused on building core operating system components in xv6, including virtual memory, synchronization primitives, and a custom Linux shell with advanced process management.",        
+        "image": "/assets/featured-projects/xv6.webp",
+        "jpg": "/assets/featured-projects/xv6.jpeg"
+    },
+    {
+        "id": "featured-project-plagiarism-detector",
+        "title": "Plagiarism Detector",
+        "year": "Oct 2024 - Nov 2024",
+        "location": "Prof. Ashutosh Gupta",
+
+        "tags": [
+            "C++",
+            "Data Structures",
+            "Algorithms",
+            "Rolling Hash",
+            "K-gram Matching",
+            "Dynamic Programming",
+            "Tokenization",
+            "Multithreading",
+            "Parallel Processing",
+            "Plagiarism Detection",
+            "Systems Programming"
+        ],
+        "github": "https://github.com/vaibhavsiingh/plagiarism_checker",
+        "description": "A plagiarism detection system in C++ that uses rolling hash, token-based analysis, k-gram matching, and dynamic programming to detect complex plagiarism patterns, with multithreading for real-time large-scale analysis.",
+        "readMore": "https://github.com/vaibhavsiingh/plagiarism_checker?tab=readme-ov-file#plagiarism-checker-for-code-submissions",
+        "image": "/assets/featured-projects/plag-detector.webp",
+        "jpg": "/assets/featured-projects/plag-detector.png"
+    },
+
+    {
+        "id": "featured-project-measure-ux",
+        "location": "Inter IIT Tech - FedEx",
+        "title": "Optimal 3D Bin Packing",
+        "year": "Oct 2024 - Dec 2024",
+        "tags": ["Optimization", "Mixed Integer Linear Programming", "Heuristics", "3D Bin Packing", "Parallel Computing", "Algorithm Design", "Operations Research", "Inter IIT Tech Meet"],
+        "description": "A project to optimize 3D cargo packing by combining Mixed Integer Linear Programming with heuristics, designed for the FedEx problem statement at Inter IIT Tech Meet 2024.",
+        "readMore": "https://drive.google.com/file/d/1HBxhZmvWcfXWGWfwBSfVUtFIFmM-ZYzQ/view?usp=sharing",
+        "image": "/assets/featured-projects/fedex.webp",
+        "jpg": "/assets/featured-projects/fedex.jpg"
+    },
+
+    {
+        "id": "featured-project-verilog",
+        "location": "Prof. Sayandeep Saha",
+        "title": "Verilog Multiplier & MIPS Sorting",
+        "year": "Oct 2024 - Dec 2024",
+        "tags": ["Verilog", "Karatsuba Algorithm", "32-bit Multiplier", "Combinational Circuits", "Sequential Circuits", "MIPS Architecture", "Mergesort", "Heapsort", "Computer Architecture"],
+        "description": "A course project on digital logic and computer architecture involving the design of a 32-bit Karatsuba multiplier in Verilog and the implementation of Mergesort and Heapsort on the MIPS architecture.",
+        "image": "/assets/featured-projects/verilog.webp",
+        "jpg": "/assets/featured-projects/verilog.jpeg"
+    }
+    
+]
