@@ -11,7 +11,7 @@ export const profile = {
     github: "https://github.com/vaibhavsiingh",
     linkedin: "https://www.linkedin.com/in/vaibhav-singh-iitb/",
     // Leave empty to hide the resume button.
-    resume: "",
+    resume: "https://drive.google.com/file/d/1j7FHgwqvv5myCCsJDXUy-0QysTORaofQ/view?usp=sharing",
     tagline: "I make computers go fast. Sometimes they even listen.",
     role: "CS @ IIT Bombay · systems · LLM inference",
 };
@@ -232,7 +232,10 @@ export const experience: Job[] = [
         org: "IIT Bombay",
         role: "B.Tech, Computer Science & Engineering",
         where: "Honors in CSE · Minor in ML & Data Science",
-        points: ["TA for CSO606 and CS101 · Institute Student Mentor"],
+        points: [
+            "TA for CS339 (Abstractions and Paradigms of Programming), CS355 (its lab), CSO606 and CS101",
+            "Institute Student Mentor",
+        ],
     },
 ];
 
