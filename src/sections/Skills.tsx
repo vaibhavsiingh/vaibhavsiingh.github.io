@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import Matter from "matter-js";
 
 import { skills } from "../content";
-import { isSmallScreen, reducedMotion } from "../lib/motion";
+import { reducedMotion } from "../lib/motion";
 
 const COLORS = ["var(--lime)", "var(--coral)", "var(--blue)", "var(--violet)", "var(--ink)"];
 
@@ -129,8 +129,6 @@ export function Skills() {
         };
     }, []);
 
-    const list = isSmallScreen ? skills.slice(0, 24) : skills;
-
     return (
         <section className="section" id="skills" data-accent="var(--violet)">
             <div className="label">{"// skills"}</div>
@@ -141,7 +139,7 @@ export function Skills() {
                 {!reducedMotion && (
                     <div className="playground-hint label">drag 'em, throw 'em. double-click for chaos.</div>
                 )}
-                {list.map((s, i) => (
+                {skills.map((s, i) => (
                     <div
                         key={s}
                         className="block"

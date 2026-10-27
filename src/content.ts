@@ -23,6 +23,7 @@ export const stats = [
     { value: "AIR 100", label: "JEE Advanced, out of 250k+" },
     { value: "PPO", label: "Return offer, Goldman Sachs" },
     { value: "1 of 14", label: "Jane Street SEE, India" },
+    { value: "TA ×4", label: "Courses, back to back since Dec 2025" },
 ];
 
 export type Project = {
