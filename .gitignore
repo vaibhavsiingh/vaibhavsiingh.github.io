@@ -24,3 +24,5 @@ yarn-error.log*
 
 firebase.json
 .firebaserc
+/dist
+*.tsbuildinfo

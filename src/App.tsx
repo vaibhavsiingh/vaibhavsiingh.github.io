@@ -1,65 +1,97 @@
-import { FC, useEffect, lazy, Suspense } from "react";
+import { useCallback, useEffect, useState } from "react";
+import Lenis from "lenis";
 
-import { Box, Container, Center, Spinner } from "@chakra-ui/react";
-import AOS from "aos";
+import { BootLoader } from "./components/BootLoader";
+import { Cursor } from "./components/Cursor";
+import { Nav } from "./components/Nav";
+import { Snake } from "./components/Snake";
+import { Terminal } from "./components/Terminal";
+import { gsap, reducedMotion, ScrollTrigger } from "./lib/motion";
+import { About } from "./sections/About";
+import { Contact } from "./sections/Contact";
+import { Experience } from "./sections/Experience";
+import { Hero } from "./sections/Hero";
+import { Others } from "./sections/Others";
+import { Skills } from "./sections/Skills";
+import { Work } from "./sections/Work";
 
-import { NavbarHeight } from "theme";
-import { AboutPageId, WorkPageId } from "utils/useScroll";
+const KONAMI = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
 
-import "./App.scss";
-import "aos/dist/aos.css";
+function firstVisit() {
+    try {
+        if (sessionStorage.getItem("booted")) return false;
+        sessionStorage.setItem("booted", "1");
+    } catch {
+        // storage blocked; just show the boot screen
+    }
+    return true;
+}
 
-const Navbar = lazy(() => import("shared/navbar/Navbar").then((module) => ({ default: module.Navbar })));
-const Landing = lazy(() => import("pages/landing/Landing").then((module) => ({ default: module.Landing })));
-const PageHeader = lazy(() =>
-    import("shared/page-header/PageHeader").then((module) => ({ default: module.PageHeader })),
-);
-const Footer = lazy(() => import("shared/footer/Footer").then((module) => ({ default: module.Footer })));
-const FeaturedProjects = lazy(() =>
-    import("pages/featured-projects/FeaturedProjects").then((module) => ({
-        default: module.FeaturedProjects,
-    })),
-);
-const OtherProjects = lazy(() =>
-    import("pages/other-projects/OtherProjects").then((module) => ({
-        default: module.OtherProjects,
-    })),
-);
-const About = lazy(() => import("pages/about/About").then((module) => ({ default: module.About })));
+const shouldBoot = !reducedMotion && firstVisit();
 
-const Loader: FC = () => (
-    <Center w="100%" h="100%">
-        <Spinner size="lg" color="primary.500" />
-    </Center>
-);
+export function App() {
+    const [booting, setBooting] = useState(shouldBoot);
+    const [terminal, setTerminal] = useState(false);
+    const [snake, setSnake] = useState(false);
+    const closeSnake = useCallback(() => setSnake(false), []);
+    const doneBooting = useCallback(() => setBooting(false), []);
 
-export const App: FC = () => {
     useEffect(() => {
-        AOS.init({ once: true });
+        // fonts change the height of everything; re-measure scroll triggers once they're in
+        document.fonts.ready.then(() => ScrollTrigger.refresh());
+        window.addEventListener("load", () => ScrollTrigger.refresh(), { once: true });
+    }, []);
+
+    useEffect(() => {
+        if (reducedMotion) return;
+        const lenis = new Lenis({ anchors: true, lerp: 0.1 });
+        lenis.on("scroll", ScrollTrigger.update);
+        const raf = (time: number) => lenis.raf(time * 1000);
+        gsap.ticker.add(raf);
+        gsap.ticker.lagSmoothing(0);
+        return () => {
+            gsap.ticker.remove(raf);
+            lenis.destroy();
+        };
+    }, []);
+
+    useEffect(() => {
+        let seq: string[] = [];
+        const onKey = (e: KeyboardEvent) => {
+            const typing = (e.target as HTMLElement).closest("input, textarea");
+            if (e.key === "`" || e.key === "~") {
+                if (typing) return;
+                e.preventDefault();
+                setTerminal((t) => !t);
+                return;
+            }
+            if (typing) return;
+            seq = [...seq, e.key.length === 1 ? e.key.toLowerCase() : e.key].slice(-KONAMI.length);
+            if (seq.join() === KONAMI.join()) {
+                seq = [];
+                setSnake(true);
+            }
+        };
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
     }, []);
 
     return (
-        <Suspense fallback={<Loader />}>
-            <Container h="100%" px={{ base: 6, md: 6, lg: 4 }}>
-                <Navbar />
-
-                <Box mt={{ base: "96px", md: NavbarHeight }}>
-                    <Landing />
-                    <Box id={WorkPageId}>
-                        <PageHeader label="Featured Projects" />
-                        <FeaturedProjects />
-
-                        <PageHeader id="page-other-projects" label="Other Projects" />
-                        <OtherProjects />
-                    </Box>
-
-                    <Box id={AboutPageId}>
-                        <PageHeader label="About Me" />
-                        <About />
-                    </Box>
-                </Box>
-                <Footer />
-            </Container>
-        </Suspense>
+        <>
+            {booting && <BootLoader onDone={doneBooting} />}
+            <Cursor />
+            <Nav onTerminal={() => setTerminal((t) => !t)} />
+            <main>
+                <Hero />
+                <About />
+                <Work />
+                <Others />
+                <Experience />
+                <Skills />
+            </main>
+            <Contact />
+            {terminal && <Terminal onClose={() => setTerminal(false)} onSnake={() => setSnake(true)} />}
+            {snake && <Snake onClose={closeSnake} />}
+        </>
     );
-};
+}
