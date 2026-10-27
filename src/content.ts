@@ -21,8 +21,7 @@ export const about =
 
 export const stats = [
     { value: "AIR 100", label: "JEE Advanced, out of 250k+" },
-    { value: "8.85", label: "CGPA · Honors in CSE" },
-    { value: "1723", label: "Codeforces Expert" },
+    { value: "PPO", label: "Return offer, Goldman Sachs" },
     { value: "1 of 14", label: "Jane Street SEE, India" },
 ];
 
@@ -232,7 +231,7 @@ export const experience: Job[] = [
         org: "IIT Bombay",
         role: "B.Tech, Computer Science & Engineering",
         where: "Honors in CSE · Minor in ML & Data Science",
-        points: ["CGPA 8.85 / 10", "TA for CSO606 and CS101 · Institute Student Mentor"],
+        points: ["TA for CSO606 and CS101 · Institute Student Mentor"],
     },
 ];
 

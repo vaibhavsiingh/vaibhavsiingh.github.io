@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const LINES = [
     "VS-BIOS v2.0  (c) Vaibhav Singh",
     "CPU: caffeine-powered @ 3.0 cups/day ........ [ OK ]",
-    "Memory test: 8.85 / 10 ...................... [ OK ]",
+    "Memory test: warming up the KV cache ........ [ OK ]",
     "Mounting /dev/projects ...................... [ OK ]",
     "Loading kernel modules: cuda, ebpf, xv6 ..... [ OK ]",
     "Starting portfolio.service ...................",
