@@ -276,4 +276,4 @@ export const skills = [
     "NumPy",
 ];
 
-export const stickers = ["ask me about xv6", "currently: sparse attention", "will optimize for food"];
+export const stickers = ["ask me about Warsaw", "currently: sparse attention", "it works on my machine"];
